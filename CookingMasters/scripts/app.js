@@ -25,7 +25,7 @@ app.recipeAI = async () => {
         body: JSON.stringify({"ingredients": value })
     })
     const jsonResponse = await response.json(); 
-    const recipe = JSON.parse(jsonResponse.content);
+    const recipe = JSON.parse(jsonResponse);
     console.log(recipe);
     if (recipe!=false) {
         app.recipes.push(recipe);
